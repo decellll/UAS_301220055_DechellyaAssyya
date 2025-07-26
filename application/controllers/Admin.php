@@ -5,6 +5,12 @@ class Admin extends CI_Controller {
 
     public function __construct() {
         parent::__construct();
+        
+        // Load database dan session
+        $this->load->database();
+        $this->load->library('session');
+        
+        // Load models
         $this->load->model('Penghuni_model');
         $this->load->model('Kamar_model');
         $this->load->model('Barang_model');
