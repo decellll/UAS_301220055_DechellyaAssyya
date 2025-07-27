@@ -57,8 +57,8 @@
                     </div>
                 <?php else: ?>
                     <div class="row">
-                        <?php foreach($kamar_kosong as $kamar): ?>
-                            <div class="col-lg-3 col-md-4 col-sm-6 mb-4" data-aos="zoom-in" data-aos-delay="<?= $loop->index * 100 ?>">
+                        <?php $i = 0; foreach($kamar_kosong as $kamar): ?>
+                            <div class="col-lg-3 col-md-4 col-sm-6 mb-4" data-aos="zoom-in" data-aos-delay="<?= $i * 100 ?>">
                                 <div class="card h-100 border-0 shadow-sm hover-card">
                                     <div class="card-body text-center p-4">
                                         <div class="room-icon mb-3">
@@ -92,7 +92,7 @@
                                     </div>
                                 </div>
                             </div>
-                        <?php endforeach; ?>
+                        <?php $i++; endforeach; ?>
                     </div>
                 <?php endif; ?>
             </div>
